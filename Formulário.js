@@ -8,8 +8,14 @@ buton.addEventListener("click", function(event) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (emailRegex.test(email)) {
-    console.log("O email é válido.");
+    console.log(" email é válido.");
   } else {
-    console.log("O email é inválido.");
+    console.log(" email é inválido.");
   }
 });
+if (telefoneRegex.test(telefone)) {
+    console.log(" telefone é válido.");
+  } else {
+    console.log(" telefone é inválido.");
+  }
+

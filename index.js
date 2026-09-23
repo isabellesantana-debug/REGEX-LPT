@@ -6,3 +6,4 @@ if (regexEmail.test(email)) {
 } else {
   console.log("O email é inválido.");
 }   
+/^\d{11}$/

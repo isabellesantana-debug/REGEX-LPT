@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
-
+    
 </head>
 <body>
-    <script src="script.js"></script>
+     <script src="script.js"></script>
+     const regextelefone = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+     const telefoneInput = document.getElementById("telefone");
+        telefoneInput.addEventListener("input", function() {
+            const telefone = telefoneInput.value;
+            if (!regextelefone.test(telefone)) {
+                telefoneInput.setCustomValidity("Digite um número de telefone válido no formato (XX) XXXXX-XXXX.");
+            } else {
+                telefoneInput.setCustomValidity("");
+            }
+        });
 
     <form action="#" method="POST">
         

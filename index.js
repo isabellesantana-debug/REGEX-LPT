@@ -5,4 +5,4 @@ if (regexEmail.test(email)) {
   console.log("O email é válido.");
 } else {
   console.log("O email é inválido.");
-}
+}   

@@ -1,21 +1,35 @@
-const buton = document.getElementById("submit-button");
-buton.addEventListener("click", function(event) {
-  event.preventDefault(); 
+const formulario = document.getElementById("formulario");
 
-  const emailInput = document.getElementById("email");
-  const email = emailInput.value;
+formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const mensagem = document.getElementById("mensagem");
 
-  if (emailRegex.test(email)) {
-    console.log(" email é válido.");
-  } else {
-    console.log(" email é inválido.");
-  }
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const regexTelefone = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+
+    let erros = [];
+
+    if (nome === "") {
+        erros.push("O nome está vazio.");
+    }
+
+    if (!regexEmail.test(email)) {
+        erros.push("O e-mail está incorreto.");
+    }
+
+    if (!regexTelefone.test(telefone)) {
+        erros.push("O telefone está incorreto.");
+    }
+
+    if (erros.length > 0) {
+        mensagem.innerHTML = erros.join("<br>");
+        return;
+    }
+
+    mensagem.textContent = "Formulário enviado com sucesso!";
 });
-if (telefoneRegex.test(telefone)) {
-    console.log(" telefone é válido.");
-  } else {
-    console.log(" telefone é inválido.");
-  }
-

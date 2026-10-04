@@ -2,7 +2,7 @@ const telefone = "(67) 99999-9999";
 
 const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
 if (regex.test(telefone)) {
-    console.log(" Telefone é válido.");
+    console.log(" Telefone é válido.");   
 } else {
     console.log(" Telefone é inválido.");
 }

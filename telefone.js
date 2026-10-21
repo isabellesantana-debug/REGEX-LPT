@@ -1,4 +1,4 @@
-const telefone = "(67) 9999-999";
+const telefone = "(67) 99999-9999";
 
 const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
 if (regex.test(telefone)) {
